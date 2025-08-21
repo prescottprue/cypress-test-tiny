@@ -15,7 +15,11 @@
   "author": "Cypress-io",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "15.0.0"
+    "@cypress/webpack-batteries-included-preprocessor": "4.0.1",
+    "@cypress/webpack-preprocessor": "6.0.4",
+    "crypto-browserify": "3.12.1",
+    "cypress": "15.0.0",
+    "typescript": "5.9.2"
   },
   "repository": {
     "type": "git",
