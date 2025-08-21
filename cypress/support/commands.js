@@ -1,3 +1,5 @@
+import crypto from 'node:crypto';
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +25,9 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+cypress.Commands.add("hash", () => {
+  return crypto.createHmac('sha256', 'some-secret')
+               .update('I love cupcakes')
+               .digest('hex');
+})
