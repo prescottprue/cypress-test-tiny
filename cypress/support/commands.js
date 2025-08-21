@@ -1,4 +1,4 @@
-import crypto from 'node:crypto';
+import crypto from 'crypto';
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -26,7 +26,7 @@ import crypto from 'node:crypto';
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-cypress.Commands.add("hash", () => {
+Cypress.Commands.add("crypto", () => {
   return crypto.createHmac('sha256', 'some-secret')
                .update('I love cupcakes')
                .digest('hex');
